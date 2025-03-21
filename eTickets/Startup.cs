@@ -1,4 +1,4 @@
-using eTickets.Data;
+﻿using eTickets.Data;
 using eTickets.Data.Cart;
 using eTickets.Data.Services;
 using eTickets.Models;
@@ -48,6 +48,9 @@ namespace eTickets
 
             // Configure VNPay
             services.AddScoped<IVnPayService,VNPayService>();
+
+            // Đăng ký EmailService
+            services.AddSingleton<EmailService>();
 
 
             //Authentication and authorization
